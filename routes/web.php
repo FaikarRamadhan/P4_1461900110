@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('buku0110',BukuController::class);
+//Route::resource('buku0110',BukuController::class);
+Route::get('/buku/export_excel', 'App\Http\Controllers\BukuController@export_excel');
+Route::get('/buku', 'App\Http\Controllers\BukuController@index');
